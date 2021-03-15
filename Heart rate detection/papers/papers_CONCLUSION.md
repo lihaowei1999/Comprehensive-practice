@@ -1,4 +1,4 @@
-## from single-channel video and ica integration of mutiple signals
+## HR and HRV from single-channel video and ica integration of mutiple signals
 
 测量目标：HR, HRV(rmssd)
 
