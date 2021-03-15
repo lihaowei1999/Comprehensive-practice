@@ -42,6 +42,7 @@ Drag directly to the bottom for download. id and password are:
 Login Id: R6072
 Password: 1B63E403
 ```
-
+create all the folders and files under /mnt/disk/lihaowei !!!
+folder /home/lihaowei is only for environment storage !!!
 
 
