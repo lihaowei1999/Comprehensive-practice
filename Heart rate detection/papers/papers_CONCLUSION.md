@@ -1,4 +1,4 @@
-from single-channel video and ica integration of mutiple signals
+## from single-channel video and ica integration of mutiple signals
 
 测量目标：HR, HRV(rmssd)
 
@@ -25,4 +25,12 @@ ROI的def，cascading classifier，l=20PIXEL
 133Hz imaging，300Hz ECG
 
 三通道取样，白化，ICA，得到频谱在0.75-2Hz内Peak值最大的为血流像
+
+
+
+## Algorithms for Monitoring Heart Rate andRespiratory Rate From the Video of a User’s Face
+
+![image-20210315170240406](C:\Users\lihaowei\Documents\GitHub\Comprehensive-practice\Heart rate detection\papers\papers_CONCLUSION.assets\image-20210315170240406.png)
+
+血红蛋白对光的反应，集中在绿光
 
