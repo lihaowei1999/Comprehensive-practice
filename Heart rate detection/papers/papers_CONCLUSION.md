@@ -34,3 +34,9 @@ ROI的def，cascading classifier，l=20PIXEL
 
 血红蛋白对光的反应，集中在绿光
 
+已实现
+
+RGB转HSV空间，获取接近皮肤颜色的H范围，观察H的数值波动
+
+
+
