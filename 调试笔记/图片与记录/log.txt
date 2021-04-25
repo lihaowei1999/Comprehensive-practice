@@ -1,0 +1,280 @@
+(uws_server.cpp:77): UwsServer begin send protocol
+(uws_server.cpp:79): UwsServer send protocol size = 265650
+(vioprocess.cpp:80): pym_layer: 0    width: 1920 height: 1080 stride: 1920
+(vioprocess.cpp:80): pym_layer: 1    width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 2    width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 3    width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 4    width: 960  height: 540  stride: 960
+(vioprocess.cpp:80): pym_layer: 5    width: 800  height: 480  stride: 800
+(vioprocess.cpp:80): pym_layer: 6    width: 640  height: 360  stride: 640
+(vioprocess.cpp:80): pym_layer: 7    width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 8    width: 480  height: 270  stride: 480
+(vioprocess.cpp:80): pym_layer: 9    width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 10   width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 11   width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 12   width: 240  height: 134  stride: 240
+(vioprocess.cpp:80): pym_layer: 13   width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 14   width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 15   width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 16   width: 120  height: 66   stride: 128
+(vioprocess.cpp:80): pym_layer: 17   width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 18   width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 19   width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 20   width: 60   height: 32   stride: 64
+(vioprocess.cpp:80): pym_layer: 21   width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 22   width: 0    height: 0    stride: 0
+(vioprocess.cpp:80): pym_layer: 23   width: 0    height: 0    stride: 0
+(vioproduce.cpp:1881): Push Image message!!!
+(smartplugin.cpp:2766): smart plugin got one msg
+(websocketplugin.cpp:355): WebsocketPLugin Feedvideo
+(convert.cpp:45): vio message, frame_id = 445
+(convert.cpp:80): websocketplugin x3 mediacodec: GetYUV
+(convert.cpp:47): vio message, pym_level_0, width=1920, height=1080, stride=1920
+(convert.cpp:47): vio message, pym_level_1, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_2, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_3, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_4, width=960, height=540, stride=960
+(convert.cpp:47): vio message, pym_level_5, width=800, height=480, stride=800
+(convert.cpp:47): vio message, pym_level_6, width=640, height=360, stride=640
+(convert.cpp:47): vio message, pym_level_7, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_8, width=480, height=270, stride=480
+(convert.cpp:47): vio message, pym_level_9, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_10, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_11, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_12, width=240, height=134, stride=240
+(convert.cpp:47): vio message, pym_level_13, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_14, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_15, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_16, width=120, height=66, stride=128
+(convert.cpp:47): vio message, pym_level_17, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_18, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_19, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_20, width=60, height=32, stride=64
+(convert.cpp:47): vio message, pym_level_21, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_22, width=0, height=0, stride=0
+(convert.cpp:47): vio message, pym_level_23, width=0, height=0, stride=0
+(convert.cpp:57): Input Frame ID = 445, Timestamp = 445
+(convert.cpp:77): input name:image
+(runtime_monitor.cpp:40): PushFrame frame_id = 445
+
+(smartplugin.cpp:2790): feed one task to xtream workflow
+(faster_rcnn.cpp:51): Run FasterRCNNMethod
+(faster_rcnn.cpp:52): input's size: 1
+(faster_rcnn_imp.cpp:367): image type: PymImageFrame
+
+(faster_rcnn_imp.cpp:405): img_height: 1080, img_width: 1920, img_y length: 2073600, img_uv length: 1036800
+(faster_rcnn_imp.cpp:477): Begin call RunModel
+(faster_rcnn_imp.cpp:1451): node data_type: 1
+(faster_rcnn_imp.cpp:1466): input_tensor.data_shape.d[0]: 1, input_tensor.data_shape.d[1]: 3, input_tensor.data_shape.d[2]: 540, input_tensor.data_shape.d[3]: 960, input_tensor.data_shape.layout: 2
+(faster_rcnn_imp.cpp:1476): image_height: 540, image_width: 960, image channel: 3, stride: 960
+(faster_rcnn_imp.cpp:830): rpp box num: 2
+(faster_rcnn_imp.cpp:830): rpp box num: 1
+(faster_rcnn_imp.cpp:830): rpp box num: 1
+(faster_rcnn_imp.cpp:779): begin GetLMKS2
+(faster_rcnn_imp.cpp:790): begin GetPose
+(faster_rcnn_imp.cpp:1270): pose.yaw: -111.237
+(faster_rcnn_imp.cpp:1273): pose.pitch: -48.0048
+(faster_rcnn_imp.cpp:1276): pose.roll: 38.5016
+(faster_rcnn_imp.cpp:784): begin GetLMKS1
+(faster_rcnn_imp.cpp:756): begin GetKps2
+(faster_rcnn_imp.cpp:552): body_box, num: 2
+(faster_rcnn_imp.cpp:554): ( x1: 513.657 y1: 220.314 x2: 1150.02 y2: 801 score: 0.99849 )
+(faster_rcnn_imp.cpp:554): ( x1: 207.94 y1: 495.743 x2: 407.033 y2: 791.268 score: 0.71931 )
+(faster_rcnn_imp.cpp:552): face_box, num: 1
+(faster_rcnn_imp.cpp:554): ( x1: 956.96 y1: 300.823 x2: 1084.77 y2: 386.239 score: 0.996402 )
+(faster_rcnn_imp.cpp:552): head_box, num: 1
+(faster_rcnn_imp.cpp:554): ( x1: 954.054 y1: 229.847 x2: 1098.73 y2: 391.119 score: 0.999301 )
+(faster_rcnn_imp.cpp:624): lmk point: [
+(faster_rcnn_imp.cpp:626): 1025.59,367.261,0.960357
+(faster_rcnn_imp.cpp:626): 1039.36,355.915,0.124525
+(faster_rcnn_imp.cpp:626): 1036.2,341.682,0.88173
+(faster_rcnn_imp.cpp:626): 1009.59,299.926,0.0135648
+(faster_rcnn_imp.cpp:626): 1025.25,283.23,0.984657
+(faster_rcnn_imp.cpp:626): 904.166,297.292,0.474753
+(faster_rcnn_imp.cpp:626): 893.937,299.303,0.902131
+(faster_rcnn_imp.cpp:626): 943.069,481.058,0.350019
+(faster_rcnn_imp.cpp:626): 931.266,489.906,0.900355
+(faster_rcnn_imp.cpp:626): 1004,576.098,0.54952
+(faster_rcnn_imp.cpp:626): 1012.06,573.312,0.873512
+(faster_rcnn_imp.cpp:626): 581.501,494.937,0.364297
+(faster_rcnn_imp.cpp:626): 629.134,527.745,0.920097
+(faster_rcnn_imp.cpp:626): 619.028,735.381,0.198734
+(faster_rcnn_imp.cpp:626): 631.069,735.119,0.537223
+(faster_rcnn_imp.cpp:626): 580.757,801.016,0.0191126
+(faster_rcnn_imp.cpp:626): 590.543,801.454,0.0206916
+(faster_rcnn_imp.cpp:628): ]
+(faster_rcnn_imp.cpp:624): lmk point: [
+(faster_rcnn_imp.cpp:626): 272.277,544.736,0.0184435
+(faster_rcnn_imp.cpp:626): 264.227,527.901,0.00845637
+(faster_rcnn_imp.cpp:626): 265.893,538.853,0.0148621
+(faster_rcnn_imp.cpp:626): 238.307,527.764,0.0214379
+(faster_rcnn_imp.cpp:626): 251.913,539.179,0.0363716
+(faster_rcnn_imp.cpp:626): 238.109,605.018,0.114604
+(faster_rcnn_imp.cpp:626): 326.388,613.699,0.393866
+(faster_rcnn_imp.cpp:626): 252.551,556.321,0.0381133
+(faster_rcnn_imp.cpp:626): 352.124,675.068,0.0418693
+(faster_rcnn_imp.cpp:626): 261.827,563.97,0.014239
+(faster_rcnn_imp.cpp:626): 374.935,743.515,0.111163
+(faster_rcnn_imp.cpp:626): 260.434,599.405,0.14919
+(faster_rcnn_imp.cpp:626): 261.053,597.766,0.181862
+(faster_rcnn_imp.cpp:626): 325.598,617.586,0.116689
+(faster_rcnn_imp.cpp:626): 328.335,625.037,0.489565
+(faster_rcnn_imp.cpp:626): 371.251,754.022,0.237344
+(faster_rcnn_imp.cpp:626): 372.577,753.685,0.506713
+(faster_rcnn_imp.cpp:628): ]
+(faster_rcnn_imp.cpp:624): lmk point: [
+(faster_rcnn_imp.cpp:626): 1043.95,350.366,0.513013
+(faster_rcnn_imp.cpp:626): 1049.32,363.247,0
+(faster_rcnn_imp.cpp:626): 1016.4,381.24,0.528549
+(faster_rcnn_imp.cpp:626): 998.234,370.543,0.594389
+(faster_rcnn_imp.cpp:626): 985.807,376.485,0
+(faster_rcnn_imp.cpp:628): ]
+(scheduler.cpp:457): ScheduleImp2: multi_task
+(MOTMethod.cpp:74): MOTMethod::DoProcess
+
+(MOTMethod.cpp:74): MOTMethod::DoProcess
+
+(MOTMethod.cpp:74): MOTMethod::DoProcess
+
+(MOTMethod.cpp:81): mot
+(IOU.cpp:149): Box size: 2
+(IOU.cpp:85): Input num: 2
+
+(MOTMethod.cpp:81): mot
+(scheduler.cpp:457): ScheduleImp2: body_mot
+(MOTMethod.cpp:81): mot
+(IOU.cpp:149): Box size: 1
+(IOU.cpp:149): Box size: 1
+(IOU.cpp:85): Input num: 1
+
+(IOU.cpp:85): Input num: 1
+
+(scheduler.cpp:457): ScheduleImp2: face_mot
+(scheduler.cpp:457): ScheduleImp2: head_mot
+(MergeMethod.cpp:68): Merge::DoProcess: 6
+(MergeMethod.cpp:118): Head body Mode
+(head_body.cpp:290): Pairs size: 1
+(head_body.cpp:357): Pairs size: 1
+(head_body.cpp:168): face in size: 1 head in size: 1 body in size: 2 head_face_idx_pairs size: 1 head_body_idx_pairs size: 1
+
+(head_body.cpp:246): face out size: 1 head out size: 1 body out size: 2
+
+(head_body.cpp:145): Process HeadBodyStrategy output
+(head_body.cpp:70): Head Face Mode, out size: 4
+(MergeMethod.cpp:71): output size: 4
+(scheduler.cpp:457): ScheduleImp2: merge_method
+(RectInputPredictor.cpp:91): box {956,300,1084,386}
+(vioproduce.cpp:1936): got frame formate:mjpeg w:1920 h:1080 len:314127
+(Predictor.cpp:165): resizeable box:1
+(RectInputPredictor.cpp:109): resizable_cnt: 1
+(RectInputPredictor.cpp:112): BPU_BBOX 0, resizable: 1
+(scheduler.cpp:457): ScheduleImp2: age_gender
+(vote_method.cpp:95): Run VoteMethod
+(vote_method.cpp:95): Run VoteMethod
+(vote_method.cpp:96): input's size: 3
+(vote_method.cpp:96): input's size: 3
+(vote_method.cpp:255): type4
+(vote_method.cpp:273): box num: 1
+(vote_method.cpp:274): vote info num: 1
+(vote_method.cpp:357): before vote, value: 1, score: 2.6543
+(vote_method.cpp:223): start vote
+(vote_method.cpp:233): end vote:1, score: 3.09445
+(vote_method.cpp:371): after vote, value: 1, score: 3.09445
+(vote_method.cpp:255): type3
+(scheduler.cpp:457): ScheduleImp2: gender_voting
+(vote_method.cpp:273): box num: 1
+(vote_method.cpp:274): vote info num: 1
+(vote_method.cpp:357): before vote, value: 3, score: 0
+(vote_method.cpp:223): start vote
+(vote_method.cpp:233): end vote:3, score: 0
+(vote_method.cpp:371): after vote, value: 3, score: 0
+(scheduler.cpp:457): ScheduleImp2: age_voting
+(smartplugin.cpp:2937): smart plugin got one smart result
+(smartplugin.cpp:2943): image, type is ImageFrame
+(smartplugin.cpp:2943): face_final_box, type is BaseDataVector
+(smartplugin.cpp:2943): head_final_box, type is BaseDataVector
+(smartplugin.cpp:2943): body_final_box, type is BaseDataVector
+(smartplugin.cpp:2943): disappeared_track_id, type is BaseDataVector
+(smartplugin.cpp:2943): pose, type is BaseDataVector
+(smartplugin.cpp:2943): lmk, type is BaseDataVector
+(smartplugin.cpp:2943): kps, type is BaseDataVector
+(smartplugin.cpp:2943): age, type is BaseDataVector
+(smartplugin.cpp:2943): gender, type is BaseDataVector
+(mergehandbody.cpp:103): image, type is ImageFrame
+(mergehandbody.cpp:103): face_final_box, type is BaseDataVector
+(mergehandbody.cpp:103): head_final_box, type is BaseDataVector
+(mergehandbody.cpp:103): body_final_box, type is BaseDataVector
+(mergehandbody.cpp:103): disappeared_track_id, type is BaseDataVector
+(mergehandbody.cpp:103): pose, type is BaseDataVector
+(mergehandbody.cpp:103): lmk, type is BaseDataVector
+(mergehandbody.cpp:103): kps, type is BaseDataVector
+(mergehandbody.cpp:103): age, type is BaseDataVector
+(mergehandbody.cpp:103): gender, type is BaseDataVector
+(mergehandbody.cpp:510): UpdateHandTrackID recv null pointer
+(smartplugin.cpp:2988): smart result image name =
+(smartplugin.cpp:2989): smart result frame_id = 445
+
+(runtime_monitor.cpp:55): Pop frame 445
+(viomessage.cpp:78): begin remove one vio slot, pipe_id: 0 frame_id: 445
+(viomessage.cpp:92): free feedback context success
+(viomessage.cpp:45): call ~ImageVioMessage
+(scheduler.cpp:423): FrameworkDataState_Ready
+(smartplugin.cpp:877): output name: image
+(smartplugin.cpp:877): output name: face_final_box
+(smartplugin.cpp:883): box type: face_final_box, box size: 1
+(smartplugin.cpp:909): face_final_box id: 1 x1: 956 y1: 300 x2: 1084 y2: 386
+(smartplugin.cpp:877): output name: head_final_box
+(smartplugin.cpp:883): box type: head_final_box, box size: 1
+(smartplugin.cpp:909): head_final_box id: 1 x1: 954 y1: 229 x2: 1098 y2: 391
+(smartplugin.cpp:877): output name: body_final_box
+(smartplugin.cpp:883): box type: body_final_box, box size: 2
+(smartplugin.cpp:909): body_final_box id: 1 x1: 513 y1: 220 x2: 1150 y2: 800
+(smartplugin.cpp:909): body_final_box id: -1 x1: 207 y1: 495 x2: 407 y2: 791
+(smartplugin.cpp:877): output name: disappeared_track_id
+(smartplugin.cpp:877): output name: pose
+(smartplugin.cpp:877): output name: lmk
+(smartplugin.cpp:877): output name: kps
+(smartplugin.cpp:1013): kps size: 2
+(smartplugin.cpp:1038): x: 1026 y: 367 score: 0.960357
+
+(smartplugin.cpp:1038): x: 1039 y: 356 score: 0.124525
+
+(smartplugin.cpp:1038): x: 1036 y: 342 score: 0.88173
+
+(smartplugin.cpp:1038): x: 1010 y: 300 score: 0.0135648
+
+(smartplugin.cpp:1038): x: 1025 y: 283 score: 0.984657
+
+(smartplugin.cpp:1038): x: 904 y: 297 score: 0.474753
+
+(smartplugin.cpp:1038): x: 894 y: 299 score: 0.902131
+
+(smartplugin.cpp:1038): x: 943 y: 481 score: 0.350019
+
+(smartplugin.cpp:1038): x: 931 y: 490 score: 0.900355
+
+(smartplugin.cpp:1038): x: 1004 y: 576 score: 0.54952
+
+(smartplugin.cpp:1038): x: 1012 y: 573 score: 0.873512
+
+(smartplugin.cpp:1038): x: 582 y: 495 score: 0.364297
+
+(smartplugin.cpp:1038): x: 629 y: 528 score: 0.920097
+
+(smartplugin.cpp:1038): x: 619 y: 735 score: 0.198734
+
+(smartplugin.cpp:1038): x: 631 y: 735 score: 0.537223
+
+(smartplugin.cpp:1038): x: 581 y: 801 score: 0.0191126
+
+(smartplugin.cpp:1038): x: 591 y: 801 score: 0.0206916
+
+(smartplugin.cpp:877): output name: age
+(smartplugin.cpp:1420): age size: 1
+(smartplugin.cpp:1449):  19 28
+(smartplugin.cpp:877): output name: gender
+(smartplugin.cpp:1456): gender size: 1
+(smartplugin.cpp:1486):  1
+(smartplugin.cpp:2569): smart result serial success
+(uws_server.cpp:77): UwsServer begin send protocol
+(uws_server.cpp:79): UwsServer send protocol size = 265786
