@@ -1,0 +1,5 @@
+{
+  "behavior_type": "detect",
+  "max_slide_window_size" : 1,
+  "model_file_path": "../../models/mymodel.bin"
+}

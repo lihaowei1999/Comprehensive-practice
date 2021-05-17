@@ -1,0 +1,26 @@
+{
+    "inputs": [
+      "body_box_list",
+      "disappeared_track_id",
+      "kps"
+    ],
+    "outputs": [
+      "detect"
+    ],
+    "workflow": [
+      {
+        "unique_name": "detect_method",
+        "method_type": "BehaviorMethod",
+        "inputs": [
+          "body_box_list",
+          "disappeared_track_id",
+          "kps"
+        ],
+        "outputs": [
+          "detect"
+        ],
+        "method_config_file": "detect.json"
+      }
+    ]
+}
+  

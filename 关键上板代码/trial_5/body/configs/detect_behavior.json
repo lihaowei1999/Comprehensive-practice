@@ -1,0 +1,4 @@
+{
+    "behavior_type": "detect",
+    "model_file_path": "../../models/mymodel.bin"
+}
