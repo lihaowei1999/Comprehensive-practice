@@ -1,0 +1,6 @@
+conda activate sensor_37
+cd \
+D:
+cd kienct_new
+cd final_editions
+python ed_online_2.py
