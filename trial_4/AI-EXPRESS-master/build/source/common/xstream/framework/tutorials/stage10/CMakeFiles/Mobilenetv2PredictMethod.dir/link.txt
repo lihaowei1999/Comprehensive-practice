@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../../lib/libMobilenetv2PredictMethod.a  CMakeFiles/Mobilenetv2PredictMethod.dir/method/Mobilenetv2PredictMethod/mobilenetv2_predict_method.cc.o
+/usr/bin/ranlib ../../../../../../lib/libMobilenetv2PredictMethod.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../lib/libBehaviorMethod.a  CMakeFiles/BehaviorMethod.dir/src/BehaviorMethod.cpp.o CMakeFiles/BehaviorMethod.dir/src/BehaviorEvent.cpp.o CMakeFiles/BehaviorMethod.dir/src/RaiseHandEvent.cpp.o CMakeFiles/BehaviorMethod.dir/src/StandEvent.cpp.o CMakeFiles/BehaviorMethod.dir/src/SquatEvent.cpp.o
+/usr/bin/ranlib ../../../../../lib/libBehaviorMethod.a

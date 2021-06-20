@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../lib/libMattingPostProcessMethod.a  CMakeFiles/MattingPostProcessMethod.dir/src/MattingPostProcessMethod.cpp.o
+/usr/bin/ranlib ../../../../../lib/libMattingPostProcessMethod.a

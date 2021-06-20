@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../lib/libSnapShotMethod.a  CMakeFiles/SnapShotMethod.dir/src/method/SnapShotMethod.cpp.o CMakeFiles/SnapShotMethod.dir/src/method/strategy/crop.cpp.o CMakeFiles/SnapShotMethod.dir/src/method/strategy/first_num_best.cpp.o CMakeFiles/SnapShotMethod.dir/src/method/image_utils/image_utils.cpp.o CMakeFiles/SnapShotMethod.dir/src/method/snapshot_data_type/snapshot_data_type.cpp.o
+/usr/bin/ranlib ../../../../../lib/libSnapShotMethod.a

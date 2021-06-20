@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../../lib/libDnnPostProcessMethod.a  CMakeFiles/DnnPostProcessMethod.dir/src/DnnPostProcessMethod.cpp.o
+/usr/bin/ranlib ../../../../../../lib/libDnnPostProcessMethod.a

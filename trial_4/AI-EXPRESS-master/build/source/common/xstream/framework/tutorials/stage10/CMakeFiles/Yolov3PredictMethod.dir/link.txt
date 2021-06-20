@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../../lib/libYolov3PredictMethod.a  CMakeFiles/Yolov3PredictMethod.dir/method/Yolov3PredictMethod/yolov3_predict_method.cc.o
+/usr/bin/ranlib ../../../../../../lib/libYolov3PredictMethod.a

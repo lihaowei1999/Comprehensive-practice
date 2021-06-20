@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../lib/libMattingPredictMethod.a  CMakeFiles/MattingPredictMethod.dir/src/MattingPredictMethod.cpp.o
+/usr/bin/ranlib ../../../../../lib/libMattingPredictMethod.a

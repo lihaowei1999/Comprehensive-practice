@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../../lib/libMobilenetv2PostProcessMethod.a  CMakeFiles/Mobilenetv2PostProcessMethod.dir/method/Mobilenetv2PostProcessMethod/mobilenetv2_post_process_method.cc.o
+/usr/bin/ranlib ../../../../../../lib/libMobilenetv2PostProcessMethod.a

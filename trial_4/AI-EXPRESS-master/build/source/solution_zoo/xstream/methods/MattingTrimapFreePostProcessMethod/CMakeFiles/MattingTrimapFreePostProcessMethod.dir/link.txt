@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../lib/libMattingTrimapFreePostProcessMethod.a  CMakeFiles/MattingTrimapFreePostProcessMethod.dir/src/MattingTrimapFreePostProcessMethod.cpp.o
+/usr/bin/ranlib ../../../../../lib/libMattingTrimapFreePostProcessMethod.a

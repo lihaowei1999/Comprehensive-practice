@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../lib/libFilterSkipFrameMethod.a  CMakeFiles/FilterSkipFrameMethod.dir/src/method/filter_skip_frame.cpp.o
+/usr/bin/ranlib ../../../../../lib/libFilterSkipFrameMethod.a

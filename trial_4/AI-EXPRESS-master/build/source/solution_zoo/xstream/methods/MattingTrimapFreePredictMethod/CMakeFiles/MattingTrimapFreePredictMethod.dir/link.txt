@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../lib/libMattingTrimapFreePredictMethod.a  CMakeFiles/MattingTrimapFreePredictMethod.dir/src/MattingTrimapFreePredictMethod.cpp.o
+/usr/bin/ranlib ../../../../../lib/libMattingTrimapFreePredictMethod.a

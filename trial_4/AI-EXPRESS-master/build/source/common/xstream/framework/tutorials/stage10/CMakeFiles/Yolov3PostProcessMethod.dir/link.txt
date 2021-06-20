@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../../lib/libYolov3PostProcessMethod.a  CMakeFiles/Yolov3PostProcessMethod.dir/method/Yolov3PostProcessMethod/yolov3_post_process_method.cc.o
+/usr/bin/ranlib ../../../../../../lib/libYolov3PostProcessMethod.a

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../source/solution_zoo/video_box/include/rtspclient/sps_pps.h
+stdint.h
+-
+
+/home/lihaowei/docker/trial_4/AI-EXPRESS-master/source/solution_zoo/video_box/src/rtspclient/sps_pps.c
+rtspclient/sps_pps.h
+/home/lihaowei/docker/trial_4/AI-EXPRESS-master/source/solution_zoo/video_box/src/rtspclient/rtspclient/sps_pps.h
+stdint.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+

@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../deps/x3_prebuilt/include/appsdk/vio/hb_errno.h
+
+../deps/x3_prebuilt/include/appsdk/vio/hb_mipi_api.h
+stdint.h
+-
+
+../deps/x3_prebuilt/include/appsdk/vio/hb_vin_api.h
+stdint.h
+-
+hb_errno.h
+../deps/x3_prebuilt/include/appsdk/vio/hb_errno.h
+
+../source/solution_zoo/common/xproto_plugins/iotvioplugin/src/iotviomanager/camera/plugin/include/iotviomanager/sensor_plugin.h
+hb_mipi_api.h
+../source/solution_zoo/common/xproto_plugins/iotvioplugin/src/iotviomanager/camera/plugin/include/iotviomanager/hb_mipi_api.h
+hb_vin_api.h
+../source/solution_zoo/common/xproto_plugins/iotvioplugin/src/iotviomanager/camera/plugin/include/iotviomanager/hb_vin_api.h
+
+/home/lihaowei/docker/trial_4/AI-EXPRESS-master/source/solution_zoo/common/xproto_plugins/iotvioplugin/src/iotviomanager/camera/plugin/src/gc4c33_plugin/gc4c33_plugin.cpp
+iostream
+-
+iotviomanager/sensor_plugin.h
+/home/lihaowei/docker/trial_4/AI-EXPRESS-master/source/solution_zoo/common/xproto_plugins/iotvioplugin/src/iotviomanager/camera/plugin/src/gc4c33_plugin/iotviomanager/sensor_plugin.h
+

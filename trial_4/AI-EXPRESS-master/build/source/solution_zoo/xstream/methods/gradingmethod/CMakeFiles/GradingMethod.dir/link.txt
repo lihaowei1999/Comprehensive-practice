@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../lib/libGradingMethod.a  CMakeFiles/GradingMethod.dir/src/method/GradingMethod.cpp.o CMakeFiles/GradingMethod.dir/src/method/WeightGrading.cpp.o
+/usr/bin/ranlib ../../../../../lib/libGradingMethod.a

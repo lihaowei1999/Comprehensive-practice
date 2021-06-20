@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../lib/libFasterRCNNMethod.a  CMakeFiles/FasterRCNNMethod.dir/src/faster_rcnn.cpp.o CMakeFiles/FasterRCNNMethod.dir/src/faster_rcnn_imp.cpp.o CMakeFiles/FasterRCNNMethod.dir/src/yuv_utils.cc.o CMakeFiles/FasterRCNNMethod.dir/src/dump.cpp.o
+/usr/bin/ranlib ../../../../../lib/libFasterRCNNMethod.a

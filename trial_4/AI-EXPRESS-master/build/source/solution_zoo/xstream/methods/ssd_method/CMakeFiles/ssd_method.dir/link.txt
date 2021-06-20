@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../lib/libssd_method.a  CMakeFiles/ssd_method.dir/src/ssd_method.cc.o CMakeFiles/ssd_method.dir/src/ssd_predictor.cc.o CMakeFiles/ssd_method.dir/src/ssd_post_process_module.cc.o CMakeFiles/ssd_method.dir/src/ssd_result_post_process.cc.o CMakeFiles/ssd_method.dir/src/exptable.cc.o CMakeFiles/ssd_method.dir/src/Utils.cc.o
+/usr/bin/ranlib ../../../../../lib/libssd_method.a

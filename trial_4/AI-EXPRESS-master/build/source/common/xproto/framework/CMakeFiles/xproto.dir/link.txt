@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../lib/libxproto.a  CMakeFiles/xproto.dir/src/message/pluginflow/msg_registry.cpp.o CMakeFiles/xproto.dir/src/plugin/xplugin.cpp.o CMakeFiles/xproto.dir/src/plugin/xpluginasync.cpp.o CMakeFiles/xproto.dir/src/threads/threadpool.cpp.o CMakeFiles/xproto.dir/src/utils/gtest_helper.cpp.o CMakeFiles/xproto.dir/src/utils/time_helper.cpp.o
+/usr/bin/ranlib ../../../../lib/libxproto.a

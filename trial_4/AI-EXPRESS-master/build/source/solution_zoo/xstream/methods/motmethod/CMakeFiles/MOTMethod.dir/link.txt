@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../../lib/libMOTMethod.a  CMakeFiles/MOTMethod.dir/src/method/MOTMethod.cpp.o CMakeFiles/MOTMethod.dir/src/method/MOT/IOU.cpp.o CMakeFiles/MOTMethod.dir/src/method/MOT/IOU2.cpp.o
+/usr/bin/ranlib ../../../../../lib/libMOTMethod.a

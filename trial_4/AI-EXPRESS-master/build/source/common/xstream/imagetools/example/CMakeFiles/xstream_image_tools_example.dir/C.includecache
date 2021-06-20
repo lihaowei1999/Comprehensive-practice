@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../source/common/xstream/imagetools/include/hobotxstream/image_tools.h
+stdint.h
+-
+
+/home/lihaowei/docker/trial_4/AI-EXPRESS-master/source/common/xstream/imagetools/example/src/example.c
+stdio.h
+-
+stdlib.h
+-
+hobotxstream/image_tools.h
+/home/lihaowei/docker/trial_4/AI-EXPRESS-master/source/common/xstream/imagetools/example/src/hobotxstream/image_tools.h
+

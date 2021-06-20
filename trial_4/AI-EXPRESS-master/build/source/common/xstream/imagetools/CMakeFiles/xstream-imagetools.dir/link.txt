@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../lib/libxstream-imagetools.a  CMakeFiles/xstream-imagetools.dir/src/image_tools.cpp.o CMakeFiles/xstream-imagetools.dir/src/imagetools/convertor.cpp.o CMakeFiles/xstream-imagetools.dir/src/imagetools/cropper.cpp.o CMakeFiles/xstream-imagetools.dir/src/imagetools/decoder.cpp.o CMakeFiles/xstream-imagetools.dir/src/imagetools/padding.cpp.o CMakeFiles/xstream-imagetools.dir/src/imagetools/resizer.cpp.o CMakeFiles/xstream-imagetools.dir/src/imagetools/rotater.cpp.o
+/usr/bin/ranlib ../../../../lib/libxstream-imagetools.a

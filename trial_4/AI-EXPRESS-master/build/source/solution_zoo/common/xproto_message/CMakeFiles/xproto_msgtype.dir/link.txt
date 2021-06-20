@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../lib/libxproto_msgtype.a  CMakeFiles/xproto_msgtype.dir/src/protobuf/ioAV.pb.cc.o CMakeFiles/xproto_msgtype.dir/src/protobuf/pack.pb.cc.o CMakeFiles/xproto_msgtype.dir/src/protobuf/x2.pb.cc.o CMakeFiles/xproto_msgtype.dir/src/protobuf/x3.pb.cc.o CMakeFiles/xproto_msgtype.dir/src/protobuf/x3ware.pb.cc.o
+/usr/bin/ranlib ../../../../lib/libxproto_msgtype.a

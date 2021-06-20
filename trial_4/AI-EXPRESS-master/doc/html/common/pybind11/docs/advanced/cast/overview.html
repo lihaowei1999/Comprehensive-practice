@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Overview &mdash; AI Express用户手册 2.9.0 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> AI Express用户手册
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../BuildAll/doc/overview.html">概述</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../BuildAll/doc/quick_start.html">快速上手</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../BuildAll/doc/xstream.html">XStream算法SDK编程框架开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../BuildAll/doc/xproto.html">XProto原型应用开发框架开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../BuildAll/doc/solution.html">场景参考解决方案</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../BuildAll/doc/tools.html">工具集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../BuildAll/doc/integration.html">如何集成模型至AI-EXPRESS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../BuildAll/doc/faq.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../BuildAll/doc/version.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../BuildAll/doc/copyright.html">版权声明</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">AI Express用户手册</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Overview</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../_sources/common/pybind11/docs/advanced/cast/overview.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p class="rubric">1. Native type in C++, wrapper in Python</p>
+<p>Exposing a custom C++ type using <code class="xref py py-class docutils literal notranslate"><span class="pre">py::class_</span></code> was covered in detail
+in the <span class="xref std std-doc">/classes</span> section. There, the underlying data structure is
+always the original C++ class while the <code class="xref py py-class docutils literal notranslate"><span class="pre">py::class_</span></code> wrapper provides
+a Python interface. Internally, when an object like this is sent from C++ to
+Python, pybind11 will just add the outer wrapper layer over the native C++
+object. Getting it back from Python is just a matter of peeling off the
+wrapper.</p>
+<p class="rubric">2. Wrapper in C++, native type in Python</p>
+<p>This is the exact opposite situation. Now, we have a type which is native to
+Python, like a <code class="docutils literal notranslate"><span class="pre">tuple</span></code> or a <code class="docutils literal notranslate"><span class="pre">list</span></code>. One way to get this data into C++ is
+with the <code class="xref py py-class docutils literal notranslate"><span class="pre">py::object</span></code> family of wrappers. These are explained in more
+detail in the <span class="xref std std-doc">/advanced/pycpp/object</span> section. We’ll just give a quick
+example here:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">print_list</span><span class="p">(</span><span class="n">py</span><span class="o">::</span><span class="n">list</span> <span class="n">my_list</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">item</span> <span class="p">:</span> <span class="n">my_list</span><span class="p">)</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">item</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">print_list</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="go">1 2 3</span>
+</pre></div>
+</div>
+<p>The Python <code class="docutils literal notranslate"><span class="pre">list</span></code> is not converted in any way – it’s just wrapped in a C++
+<code class="xref py py-class docutils literal notranslate"><span class="pre">py::list</span></code> class. At its core it’s still a Python object. Copying a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">py::list</span></code> will do the usual reference-counting like in Python.
+Returning the object to Python will just remove the thin wrapper.</p>
+<p class="rubric">3. Converting between native C++ and Python types</p>
+<p>In the previous two cases we had a native type in one language and a wrapper in
+the other. Now, we have native types on both sides and we convert between them.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">print_vector</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">item</span> <span class="p">:</span> <span class="n">v</span><span class="p">)</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">item</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">print_vector</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="go">1 2 3</span>
+</pre></div>
+</div>
+<p>In this case, pybind11 will construct a new <code class="docutils literal notranslate"><span class="pre">std::vector&lt;int&gt;</span></code> and copy each
+element from the Python <code class="docutils literal notranslate"><span class="pre">list</span></code>. The newly constructed object will be passed
+to <code class="docutils literal notranslate"><span class="pre">print_vector</span></code>. The same thing happens in the other direction: a new
+<code class="docutils literal notranslate"><span class="pre">list</span></code> is made to match the value returned from C++.</p>
+<p>Lots of these conversions are supported out of the box, as shown in the table
+below. They are very convenient, but keep in mind that these conversions are
+fundamentally based on copying data. This is perfectly fine for small immutable
+types but it may become quite expensive for large data structures. This can be
+avoided by overriding the automatic conversion with a custom wrapper (i.e. the
+above-mentioned approach 1). This requires some manual effort and more details
+are available in the <a class="reference internal" href="stl.html#opaque"><span class="std std-ref">Making opaque types</span></a> section.</p>
+<div class="section" id="list-of-all-builtin-conversions">
+<span id="conversion-table"></span><h2>List of all builtin conversions<a class="headerlink" href="#list-of-all-builtin-conversions" title="永久链接至标题">¶</a></h2>
+<p>The following basic data types are supported out of the box (some may require
+an additional extension header to be included). To pass other data structures
+as arguments and return values, refer to the section on binding <a class="reference internal" href="../../classes.html#classes"><span class="std std-ref">Object-oriented code</span></a>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="29%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Data type</th>
+<th class="head">Description</th>
+<th class="head">Header file</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">int8_t</span></code>, <code class="docutils literal notranslate"><span class="pre">uint8_t</span></code></td>
+<td>8-bit integers</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">int16_t</span></code>, <code class="docutils literal notranslate"><span class="pre">uint16_t</span></code></td>
+<td>16-bit integers</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">int32_t</span></code>, <code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></td>
+<td>32-bit integers</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">int64_t</span></code>, <code class="docutils literal notranslate"><span class="pre">uint64_t</span></code></td>
+<td>64-bit integers</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ssize_t</span></code>, <code class="docutils literal notranslate"><span class="pre">size_t</span></code></td>
+<td>Platform-dependent size</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">double</span></code></td>
+<td>Floating point types</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">bool</span></code></td>
+<td>Two-state Boolean type</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">char</span></code></td>
+<td>Character literal</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">char16_t</span></code></td>
+<td>UTF-16 character literal</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">char32_t</span></code></td>
+<td>UTF-32 character literal</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">wchar_t</span></code></td>
+<td>Wide character literal</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char</span> <span class="pre">*</span></code></td>
+<td>UTF-8 string literal</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char16_t</span> <span class="pre">*</span></code></td>
+<td>UTF-16 string literal</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char32_t</span> <span class="pre">*</span></code></td>
+<td>UTF-32 string literal</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">wchar_t</span> <span class="pre">*</span></code></td>
+<td>Wide string literal</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std::string</span></code></td>
+<td>STL dynamic UTF-8 string</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">std::u16string</span></code></td>
+<td>STL dynamic UTF-16 string</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std::u32string</span></code></td>
+<td>STL dynamic UTF-32 string</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">std::wstring</span></code></td>
+<td>STL dynamic wide string</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std::string_view</span></code>,
+<code class="docutils literal notranslate"><span class="pre">std::u16string_view</span></code>, etc.</td>
+<td>STL C++17 string views</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">std::pair&lt;T1,</span> <span class="pre">T2&gt;</span></code></td>
+<td>Pair of two custom types</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std::tuple&lt;...&gt;</span></code></td>
+<td>Arbitrary tuple of types</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">std::reference_wrapper&lt;...&gt;</span></code></td>
+<td>Reference type wrapper</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/pybind11.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std::complex&lt;T&gt;</span></code></td>
+<td>Complex numbers</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/complex.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">std::array&lt;T,</span> <span class="pre">Size&gt;</span></code></td>
+<td>STL static array</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std::vector&lt;T&gt;</span></code></td>
+<td>STL dynamic array</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">std::deque&lt;T&gt;</span></code></td>
+<td>STL double-ended queue</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std::valarray&lt;T&gt;</span></code></td>
+<td>STL value array</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">std::list&lt;T&gt;</span></code></td>
+<td>STL linked list</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std::map&lt;T1,</span> <span class="pre">T2&gt;</span></code></td>
+<td>STL ordered map</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">std::unordered_map&lt;T1,</span> <span class="pre">T2&gt;</span></code></td>
+<td>STL unordered map</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std::set&lt;T&gt;</span></code></td>
+<td>STL ordered set</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">std::unordered_set&lt;T&gt;</span></code></td>
+<td>STL unordered set</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std::optional&lt;T&gt;</span></code></td>
+<td>STL optional type (C++17)</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">std::experimental::optional&lt;T&gt;</span></code></td>
+<td>STL optional type (exp.)</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std::variant&lt;...&gt;</span></code></td>
+<td>Type-safe union (C++17)</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/stl.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">std::function&lt;...&gt;</span></code></td>
+<td>STL polymorphic function</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/functional.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std::chrono::duration&lt;...&gt;</span></code></td>
+<td>STL time duration</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/chrono.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">std::chrono::time_point&lt;...&gt;</span></code></td>
+<td>STL date/time</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/chrono.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Eigen::Matrix&lt;...&gt;</span></code></td>
+<td>Eigen: dense matrix</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/eigen.h</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Eigen::Map&lt;...&gt;</span></code></td>
+<td>Eigen: mapped memory</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/eigen.h</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Eigen::SparseMatrix&lt;...&gt;</span></code></td>
+<td>Eigen: sparse matrix</td>
+<td><code class="file docutils literal notranslate"><span class="pre">pybind11/eigen.h</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2020, Horizon Robotics.
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
